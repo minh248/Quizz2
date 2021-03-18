@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import {ListGroupItem} from "reactstrap";
+import {ListGroup, ListGroupItem} from "reactstrap";
 
 const ListItem = () => {
     const items = [
@@ -112,7 +112,9 @@ const ListItem = () => {
 
 
     return (
-        {listItem}
+        <ListGroup>
+            {listItem}
+        </ListGroup>
     )
 }
 
