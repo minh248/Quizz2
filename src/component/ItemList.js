@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import {ListGroup, ListGroupItem} from "reactstrap";
 
-const ListItem = () => {
+const ItemList = ({category}) => {
     const items = [
         {
             "id": 1,
@@ -105,17 +105,16 @@ const ListItem = () => {
         }
     ]
 
-    const listItem = items.map((item) => (
-        <ListGroupItem key={item.id} tag={"a"} href={item.url}> {item.name} </ListGroupItem>
+    const itemList = items.map((item) => (
+        <ListGroupItem tag={"a"} href={`/quizz/${item.id}`}> {item.name} </ListGroupItem>
     ))
-
 
 
     return (
         <ListGroup>
-            {listItem}
+            {itemList}
         </ListGroup>
     )
 }
 
-export default ListItem
+export default ItemList

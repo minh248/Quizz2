@@ -1,6 +1,9 @@
 import React, { useState } from 'react'
 import {
-    Container, DropdownItem, DropdownMenu, DropdownToggle,
+    Container,
+    DropdownItem,
+    DropdownMenu,
+    DropdownToggle,
     Nav,
     Navbar,
     NavbarBrand, UncontrolledDropdown
@@ -9,7 +12,7 @@ import {
 import {
     Box
 } from "react-feather";
-
+import DropdownItemCategoriesList from "./DropdownItemCategoriesList";
 
 const TopNav = () => {
     const [isOpen, setIsOpen] = useState(false)
@@ -30,7 +33,8 @@ const TopNav = () => {
                         Category
                     </DropdownToggle>
                     <DropdownMenu right>
-                        <DropdownItem href="/animals">Animals</DropdownItem>
+                        {/* get from my component */}
+                        <DropdownItemCategoriesList/>
                     </DropdownMenu>
                 </UncontrolledDropdown>
             </Nav>

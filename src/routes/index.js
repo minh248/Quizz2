@@ -14,12 +14,17 @@ const landingRoutes = {
 const itemRoutes = {
     path: "/:category",
     component: Item,
+    children: null
+}
+
+const quizzRoutes = {
+    path: "/quizz",
     children: [
         {
-            path: "/animals/:itemId",
+            path:"/quizz/:itemId",
             component: Quizz
         }
-    ],
+    ]
 }
 
 const checkRoutes = {
@@ -30,7 +35,8 @@ const checkRoutes = {
 
 export const landing = [landingRoutes]
 export const item = [itemRoutes]
+export const quizz = [quizzRoutes]
 export const check = [checkRoutes]
 
 
-export default [landingRoutes, itemRoutes, checkRoutes]
+export default [landingRoutes, itemRoutes, quizzRoutes, checkRoutes]

@@ -1,16 +1,18 @@
 import React, {useState, useEffect} from 'react'
 import TopNav from "../../component/TopNav";
-import ListItem from "../../component/ListItem";
+import ItemList from "../../component/ItemList";
 import {Container} from "reactstrap";
+import {useParams} from "react-router-dom"
 
 const Item = () => {
+    const { category } = useParams();
 
+    alert(category)
 
     return (
         <>
-            <TopNav/>
             <Container className="m-5">
-                <ListItem/>
+                <ItemList category={category}/>
             </Container>
         </>
     )
