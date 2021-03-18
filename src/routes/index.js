@@ -28,7 +28,7 @@ const quizzRoutes = {
 }
 
 const checkRoutes = {
-    path: "/check",
+    path: "/check/result",
     component: Check,
     children: null,
 }

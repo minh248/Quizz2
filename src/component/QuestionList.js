@@ -1,6 +1,7 @@
 import React from 'react'
 import MultipleQuestion from "./MultipleQuestion";
 import NormalQuestion from "./NormalQuestion";
+import { AvForm, AvField, AvGroup, AvInput, AvFeedback, AvRadioGroup, AvRadio, AvCheckboxGroup, AvCheckbox } from 'availity-reactstrap-validation';
 import {Button, Form} from "reactstrap";
 
 const questions = [
@@ -5737,9 +5738,9 @@ const QuestionList = ({itemId}) => {
     }
 
     return (
-        <Form action={"/check"}>
+        <Form action={"/check/result"}>
             {questionList}
-            <Button color="primary" type="submit" className="m-3">Submit answer</Button>
+            <Button color="primary" type="submit" className="ml-4">Submit answer</Button>
         </Form>
     )
 }

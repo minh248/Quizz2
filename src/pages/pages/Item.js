@@ -7,8 +7,6 @@ import {useParams} from "react-router-dom"
 const Item = () => {
     const { category } = useParams();
 
-    alert(category)
-
     return (
         <>
             <Container className="m-5">
