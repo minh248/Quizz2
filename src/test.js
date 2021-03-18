@@ -1,8 +1,3 @@
-import React from 'react'
-import MultipleQuestion from "./MultipleQuestion";
-import NormalQuestion from "./NormalQuestion";
-import {Button, Form} from "reactstrap";
-
 const questions = [
     {
         "id": 1,
@@ -5720,28 +5715,16 @@ const questions = [
     }
 ]
 
-const QuestionList = ({itemId}) => {
-    const questionList = questions.filter(question =>
-        question.itemId.toString() === itemId.toString()
-    ).map(question => {
-        if (question.isMultipleChoiceQuestion) {
-            return <MultipleQuestion question={question}/>
-        } else {
-            return <NormalQuestion question={question}/>
-        }
-    })
+const questionList = questions.filter(question =>
+    question.itemId === 1
+)
 
-    const handleSubmit = (event) => {
-        event.preventDefault()
-        alert("submit")
+const questionListWithForm = questionList.map(question => {
+    if (question.isMultipleChoiceQuestion) {
+        return 1
+    } else {
+        return 2
     }
+})
 
-    return (
-        <Form action={"/check"}>
-            {questionList}
-            <Button color="primary" type="submit" className="m-3">Submit answer</Button>
-        </Form>
-    )
-}
-
-export default QuestionList
+console.log(questionListWithForm)
