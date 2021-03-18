@@ -1,13 +1,11 @@
-import React from 'react'
-import Landing from "./pages/pages/Landing";
-import Item from "./pages/pages/Item";
+import React from "react";
 
-const App = () => {
-    return (
-        <div>
-            <Item/>
-        </div>
-    )
-};
+import Routes from "./routes/Routes";
+
+const App = () => (
+    <>
+        <Routes />
+    </>
+);
 
 export default App;

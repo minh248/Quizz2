@@ -1,6 +1,6 @@
 import React from 'react'
 import {Button} from "reactstrap";
-import TopNav from "../nav/TopNav";
+import TopNav from "../../component/TopNav";
 
 const Landing = () => {
     return (
