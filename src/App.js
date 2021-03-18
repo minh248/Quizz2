@@ -1,10 +1,11 @@
 import React from 'react'
-import Landing from "./pages/Landing";
+import Landing from "./pages/pages/Landing";
+import Item from "./pages/pages/Item";
 
 const App = () => {
     return (
         <div>
-            <Landing/>
+            <Item/>
         </div>
     )
 };
