@@ -5732,16 +5732,17 @@ const QuestionList = ({itemId}) => {
         }
     })
 
-    const handleSubmit = (event) => {
+    const handleSubmit = async (event, error, values) => {
         event.preventDefault()
         alert("submit")
+        console.log(values)
     }
 
     return (
-        <Form action={"/check/result"}>
+        <AvForm onSubmit={handleSubmit}>
             {questionList}
             <Button color="primary" type="submit" className="ml-4">Submit answer</Button>
-        </Form>
+        </AvForm>
     )
 }
 

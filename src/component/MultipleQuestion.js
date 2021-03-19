@@ -4,27 +4,24 @@ import {
     Col,
     FormGroup, Input, Label
 } from "reactstrap";
+import { AvForm, AvField, AvGroup, AvInput, AvFeedback, AvRadioGroup, AvRadio, AvCheckboxGroup, AvCheckbox } from 'availity-reactstrap-validation';
+
 
 const MultipleQuestion = ({question}) => {
     const answerList = question.answers.map((answer) => {
         return (
-            <FormGroup check>
-                <Label check>
-                    <Input type="radio" name={`question${question.id}`} value={answer.answer}/>
-                    {answer.answer}
-                </Label>
-            </FormGroup>
+            <AvRadio label={answer.answer} value={answer.answer}/>
         )
     })
 
     return (
         <Card body outline color="primary" className="m-3">
-            <FormGroup tag="fieldset" row>
-                <legend className="col-form-label"> {question.question} </legend>
-                <Col sm={10}>
+            <AvGroup required>
+                <Label className="col-form-label"> {question.question} </Label>
+                <AvRadioGroup name={`question${question.id}`} required >
                     {answerList}
-                </Col>
-            </FormGroup>
+                </AvRadioGroup>
+            </AvGroup>
         </Card>
     )
 }

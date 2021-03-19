@@ -1,5 +1,7 @@
 import React from 'react'
 import {Card, Col, FormGroup, Input} from "reactstrap";
+import { AvForm, AvField, AvGroup, AvInput, AvFeedback, AvRadioGroup, AvRadio, AvCheckboxGroup, AvCheckbox } from 'availity-reactstrap-validation';
+
 
 const NormalQuestion = ({question}) => {
 
